@@ -1,0 +1,91 @@
+/* pages/home/home.wxss */
+.stats-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40rpx;
+  background: linear-gradient(135deg, #0076FF 0%, #0055FF 100%);
+  color: white;
+  margin-top: 20rpx;
+}
+
+.stats-item {
+  text-align: center;
+}
+
+.stats-item .label {
+  font-size: 24rpx;
+  opacity: 0.8;
+  margin-bottom: 8rpx;
+}
+
+.stats-item .value {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.stats-separator {
+  width: 1rpx;
+  height: 60rpx;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20rpx;
+  margin-top: 20rpx;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 220rpx;
+}
+
+.feature-item .icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 16rpx;
+}
+
+.feature-item .name {
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.feature-item .desc {
+  font-size: 20rpx;
+  color: #999;
+  margin-top: 4rpx;
+}
+
+.notice-section {
+  margin-top: 20rpx;
+}
+
+.section-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.todo-item {
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.badge {
+  background: #f0f0f0;
+  color: #666;
+  padding: 4rpx 16rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+}
+
+.badge.danger {
+  background: #FFEBEB;
+  color: #FF4D4F;
+}

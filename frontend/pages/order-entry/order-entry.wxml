@@ -1,0 +1,46 @@
+<view class="container">
+  <view class="order-step-card card">
+    <view class="step-title">1. 输入/扫码商品 PN 码</view>
+    <view class="flex-between">
+      <input class="input-field flex-1" placeholder="例如: 82RK0000CD" bindinput="onPNInput" value="{{pnCode}}" />
+      <button class="btn-scan" bindtap="scanPN">扫码</button>
+    </view>
+    <view wx:if="{{productInfo}}" class="product-preview mt-20">
+      <view class="text-bold">{{productInfo.PRODUCT_NAME}}</view>
+      <view class="text-muted">官方零售价: ¥{{productInfo.BASE_PRICE}} (含 15% 补贴预计 ¥{{productInfo.subsidy}})</view>
+    </view>
+  </view>
+
+  <view class="order-step-card card" wx:if="{{productInfo}}">
+    <view class="step-title">2. 扫描商品 SN/IMEI 码</view>
+    <view class="flex-between">
+      <input class="input-field flex-1" placeholder="序列号/扫码确认" bindinput="onSNInput" value="{{snCode}}" />
+      <button class="btn-scan" bindtap="scanSN">扫码</button>
+    </view>
+  </view>
+
+  <view class="order-step-card card" wx:if="{{snCode && productInfo}}">
+    <view class="step-title">3. 订单预览与核算</view>
+    <view class="fee-row flex-between">
+      <text>商品原价</text>
+      <text>¥{{productInfo.BASE_PRICE}}</text>
+    </view>
+    <view class="fee-row flex-between text-success">
+      <text>预填国家/教育补贴 (85折/封顶)</text>
+      <text>- ¥{{subsidyAmount}}</text>
+    </view>
+    <view class="fee-row flex-between divider">
+      <text class="text-bold">最终实付金额</text>
+      <text class="text-bold text-primary">¥{{finalAmount}}</text>
+    </view>
+
+    <view class="customer-info mt-20">
+      <input class="input-field" placeholder="客户姓名 (选填)" bindinput="onCustomerNameInput" v-model="customerName" />
+      <input class="input-field" placeholder="客户手机号 (选填)" bindinput="onCustomerPhoneInput" v-model="customerPhone" />
+    </view>
+  </view>
+
+  <view class="bottom-action" wx:if="{{snCode && productInfo}}">
+    <button class="btn-primary" bindtap="submitOrder">确 认 开 单</button>
+  </view>
+</view>

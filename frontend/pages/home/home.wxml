@@ -1,0 +1,51 @@
+<view class="container">
+  <!-- 业绩顶部概览 -->
+  <view class="stats-header card">
+    <view class="stats-item">
+      <view class="label">今日销量</view>
+      <view class="value">{{todaySales}}</view>
+    </view>
+    <view class="stats-separator"></view>
+    <view class="stats-item">
+      <view class="label">本月提成 (预估)</view>
+      <view class="value">¥{{monthlyCommission}}</view>
+    </view>
+  </view>
+
+  <!-- 功能磁贴区 -->
+  <view class="feature-grid">
+    <view class="feature-item card" bindtap="navToOrder">
+      <image class="icon" src="/static/icons/new-order.png"></image>
+      <view class="name">销售开单</view>
+      <view class="desc">扫码/PN 录入</view>
+    </view>
+    <view class="feature-item card" bindtap="navToInventory">
+      <image class="icon" src="/static/icons/stock.png"></image>
+      <view class="name">库存查询</view>
+      <view class="desc">SN 池追踪</view>
+    </view>
+    <view class="feature-item card" bindtap="navToStockIn">
+      <image class="icon" src="/static/icons/stock-in.png"></image>
+      <view class="name">采购入库</view>
+      <view class="desc">扫码快速入库</view>
+    </view>
+    <view class="feature-item card" bindtap="navToStats">
+      <image class="icon" src="/static/icons/reports.png"></image>
+      <view class="name">财务报表</view>
+      <view class="desc">老板级看板</view>
+    </view>
+  </view>
+
+  <!-- 待办/通知区域 -->
+  <view class="notice-section card">
+    <view class="section-title">我的待办</view>
+    <view class="todo-item flex-between">
+      <view class="text">待上传凭证订单</view>
+      <view class="badge">{{pendingVouchers}}</view>
+    </view>
+    <view class="todo-item flex-between">
+      <view class="text">低库存预警</view>
+      <view class="badge danger">{{lowStockCount}}</view>
+    </view>
+  </view>
+</view>

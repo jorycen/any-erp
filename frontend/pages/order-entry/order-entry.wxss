@@ -1,0 +1,60 @@
+/* pages/order-entry/order-entry.wxss */
+.order-step-card {
+  margin-top: 20rpx;
+}
+
+.step-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 24rpx;
+}
+
+.input-field {
+  background: #f8f8f8;
+  height: 88rpx;
+  border-radius: 12rpx;
+  padding: 0 24rpx;
+  font-size: 28rpx;
+}
+
+.btn-scan {
+  background: #E8F2FF;
+  color: #0076FF;
+  font-size: 24rpx;
+  margin-left: 20rpx;
+  padding: 0 30rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 12rpx;
+}
+
+.mt-20 { margin-top: 20rpx; }
+.text-bold { font-weight: bold; }
+.text-success { color: #52C41A; }
+
+.fee-row {
+  font-size: 28rpx;
+  margin-bottom: 16rpx;
+  padding: 10rpx 0;
+}
+
+.divider {
+  border-top: 1rpx solid #f0f0f0;
+  margin-top: 20rpx;
+  padding-top: 24rpx;
+}
+
+.bottom-action {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30rpx 40rpx;
+  background: white;
+  box-shadow: 0 -4rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+
+.customer-info .input-field {
+  margin-top: 20rpx;
+}

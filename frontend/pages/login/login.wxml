@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="login-header">
+    <image class="logo" src="/static/images/logo.png"></image>
+    <view class="title">艾诺云销售助手</view>
+    <view class="subtitle">让电脑零售更高效</view>
+  </view>
+
+  <view class="login-card card">
+    <view class="form-item">
+      <input class="input-field" placeholder="请输入用户名" bindinput="onUserInput" value="{{username}}" />
+    </view>
+    <view class="form-item">
+      <input class="input-field" type="password" placeholder="请输入密码" bindinput="onPasswordInput" value="{{password}}" />
+    </view>
+    <button class="btn-primary login-btn" bindtap="handleLogin">登 录</button>
+  </view>
+
+  <view class="footer-text">
+    <text class="text-muted">© 成都艾诺云科技有限公司</text>
+  </view>
+</view>
